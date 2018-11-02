@@ -13,6 +13,8 @@
           <%= f.input :description, label: "Amount:", required: false, as: :integer, input_html: { style: 'width: 70px'} %>
           <%= f.association :ingredient, label: "dose(s) of", prompt: "Select an ingredient", collection: Ingredient.order('name ASC'), required: false  %>
           <%= f.button :submit, name: "commit", value: "Add" %>
+          <%= link_to "Go back", root_path %>
+
         <% end %>
       </div>
   </div>
