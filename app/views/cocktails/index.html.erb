@@ -1,10 +1,13 @@
 <h1>Cocktails!</h1>
 <ul>
 <% @cocktails.each do |cocktails| %>
-<li><%= cocktails.name %></li>
- <%= link_to 'Show', cocktails, class:'btn btn-primary' %>
-    <%= link_to 'Edit', edit_cocktails_path(cocktail), class:'btn btn-secondary' %>
-    <%= link_to 'Destroy', cocktails, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %>
+<li>
+  <%= cocktails.name%>
+    <%= link_to 'Show', cocktails, class:'btn btn-primary' %>
+  </li>
+<%= link_to "Delete", cocktail_path(cocktails), method: :delete , class:'btn btn-primary'%>
 <% end %>
 </ul>
-<%= link_to "add a new cocktail", new_cocktail_path %>
+<%= link_to "add a new cocktail", new_cocktail_path, class:'btn btn-lg btn-success'%>
+
+

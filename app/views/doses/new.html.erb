@@ -1,5 +1,6 @@
 <h1>Doses#new</h1>
 <p>Find me in app/views/doses/new.html.erb</p>
+ <%=link_to 'Back', cocktails_path %>
 
    <h1><%= @cocktail.name %></h1>
         <h3>Ingredients:</h3>
@@ -16,6 +17,5 @@
           <%= f.input :description, label: "Amount:", required: false, as: :integer, input_html: { style: 'width: 70px'} %>
           <%= f.association :ingredient, label: "dose(s) of", prompt: "Select an ingredient", collection: Ingredient.order('name ASC'), required: false  %>
           <%= f.button :submit, name: "commit", value: "Add" %>
-          <%=link_to 'Back', cocktails_path %>
         <% end %>
 
